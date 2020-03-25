@@ -2,7 +2,7 @@ import React from 'react';
 import { SafeAreaView, StyleSheet, View, StatusBar } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
 
-import BottomNav from './src/components/bottomNav';
+import BottomNav from './components/bottomNav';
 
 const App = () => {
   return (
