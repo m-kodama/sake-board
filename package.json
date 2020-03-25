@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "tslint --format stylish 'src/**/*.ts{,x}'"
+    "lint": "tslint --format stylish 'src/**/*.ts{,x}'",
+    "tslint-check": "tslint-config-prettier-check ./tslint.json"
   },
   "dependencies": {
     "react": "16.9.0",
