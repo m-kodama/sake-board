@@ -20,9 +20,9 @@ const BottomNav: React.FC = () => {
       <Tab.Navigator
         initialRouteName="HOME"
         tabBarOptions={{
-          activeTintColor: '#FFF',
+          activeTintColor: '#333',
           style: {
-            backgroundColor: '#000',
+            backgroundColor: '#FFF',
           },
         }}
       >

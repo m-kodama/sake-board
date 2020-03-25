@@ -27,7 +27,7 @@ const StackNav: React.FC = () => {
         component={BottomNav}
         options={{
           title: 'SAKE BOARD',
-          headerTintColor: '#000',
+          headerTintColor: '#333',
         }}
       />
     </Stack.Navigator>
