@@ -1,31 +1,38 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, View, StatusBar } from 'react-native';
-import { createStackNavigator } from 'react-navigation-stack';
+import { StyleSheet, View, StatusBar } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import BottomNav from './components/bottomNav';
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <View style={styles.flex}>
+      <View style={styles.flex}>
+        <NavigationContainer>
           <StackNav />
-        </View>
-      </SafeAreaView>
+        </NavigationContainer>
+      </View>
     </>
   );
 };
 
-const StackNav = createStackNavigator({
-  BottomNav: {
-    screen: BottomNav,
-    navigationOptions: {
-      headerTintColor: '#000',
-      header: null,
-    },
-  },
-});
+const Stack = createStackNavigator();
+const StackNav: React.FC = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="BottomNav"
+        component={BottomNav}
+        options={{
+          title: 'SAKE BOARD',
+          headerTintColor: '#000',
+        }}
+      />
+    </Stack.Navigator>
+  );
+};
 
 const styles = StyleSheet.create({
   flex: {
